@@ -45,6 +45,9 @@ to work with Trellis and to be able to work remotely:
 
 **NB** Ansible is both needed for setting up a remote server for staging or production on DreamCompute. Git will also be needed as well as the latest Python 2.x version for running Ansible 2.0.2.0
 
+Local Setup
+~~~~~~~~~~~~~
+
 How you install things locally depends partly on your operating system (OSX, Linux, Windows) and is not really part of this tutorial as we focus on the DreamCompute part of things. I recommend following the Trellis documentation on this `here
 <https://roots.io/trellis/docs/local-development-setup/>`_
 . Just remember the earlier mentioned prerequitsites. Without those on your local server or PC you won't be able to get things started. This and the proper changes in the Trellis configuration files for setting up a site locally and remotely the way you want. See documentation on this `here
@@ -70,6 +73,9 @@ Provisoning Your DreamCompute Instance
 ~~~~~~~~~~~~~
 
 Provisioning Trellis means setting up the actual LEMP stack for your staging or production website. Staging and Production do not differ much. Do remember you need a separate instance for both though! Provisioning you normally do once you have worked out the proper site setup and have setup things locally.
+
+Configuration Files
+~~~~~~
 
 Let's say you work locally and on production only and have worked out things locally. The you only need to setup wordpress_sites.yml for provisioning your remote server - setting up remote server documention `here
 <https://roots.io/trellis/docs/remote-server-setup/>`_

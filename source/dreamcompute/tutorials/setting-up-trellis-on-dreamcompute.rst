@@ -190,7 +190,7 @@ Wait, there is one more important file to attend to located in trellis/group_var
     web_sudoers:
       - "/usr/sbin/service php7.0-fpm *"
 
-Everything else in this file can stay the same.
+Everything else in this file can stay the same. Do notice where it is grabbing the SSH keys from. If you have keys with a different name or located elsewhere you do need to change those lines as well.
 
 Push to Remote DreamCompute Instance
 *************

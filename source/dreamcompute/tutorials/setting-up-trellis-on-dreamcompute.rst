@@ -197,8 +197,10 @@ Deploying your site to DreamCompute
 ~~~~~~~~~~~~~
 
 You have to realize that provisioning is just setting up your server for working with WordPress really well and at lightning speed. The instance is still not loading a site at all and going to the ip address or domain will show you a nice Nginx 404 as nothing can be found. You simply need to push your locally deployed WordPress site to the server still. Once that is done you will see remotely what you see locally.
+
 Issues setting up Trellis
 ~~~~~~~~~~~~~
+
 If you do run into issues ask a question at Roots Discourse `here
 <https://discourse.roots.io/c/trellis>`_
 This is the dedicated forum sub section for Trellis and that is where you can find the experts you need debuggig issues. Many errors with possible solution can also be found `here

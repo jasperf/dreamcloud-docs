@@ -116,26 +116,26 @@ Here *environment* will be production if you are pushing to production. staging 
 Wait, there is one more important file to attend to located in trellis/group_vars/all. That is users.yml. DreamCompute does not work with root but with the user dhc-user and that should be reflected in this file:
 
 .. code:
-# Documentation: https://roots.io/trellis/docs/ssh-keys/
-admin_user: dhc-user
-# Also define 'vault_sudoer_passwords' (`group_vars/staging/vault.yml`, `group_vars/production/vault.yml`)
-users:
-  - name: "{{ web_user }}"
-    groups:
-      - "{{ web_group }}"
-    keys:
-      - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
-      # - https://github.com/username.keys
-  - name: "{{ admin_user }}"
-    groups:
-      - sudo
-    keys:
-      - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
-      # - https://github.com/username.keys
-web_user: web
-web_group: www-data
-web_sudoers:
-  - "/usr/sbin/service php7.0-fpm *"
+    # Documentation: https://roots.io/trellis/docs/ssh-keys/
+    admin_user: dhc-user
+    # Also define 'vault_sudoer_passwords' (`group_vars/staging/vault.yml`, `group_vars/production/vault.yml`)
+    users:
+      - name: "{{ web_user }}"
+        groups:
+          - "{{ web_group }}"
+        keys:
+          - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+          # - https://github.com/username.keys
+      - name: "{{ admin_user }}"
+        groups:
+          - sudo
+        keys:
+          - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+          # - https://github.com/username.keys
+    web_user: web
+    web_group: www-data
+    web_sudoers:
+      - "/usr/sbin/service php7.0-fpm *"
 
 Everything else in this file can stay the same.
 

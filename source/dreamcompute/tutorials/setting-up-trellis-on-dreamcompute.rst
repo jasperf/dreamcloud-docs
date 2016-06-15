@@ -15,9 +15,11 @@ to install a very sold modern LEMP stack on DreamCompute. This stack is great to
 Preparation
 ~~~~~~~~~~~~~~~
 
-This Trellis server setup on a DreamCompute instance is best done using a Ubuntu 14.0.4 image on DreamCompute. You can also use a more recent version of Ubuntu, Ubuntu 16.0.4. However, you will then be forced to install an older version of Python side by side with Python 3 on your DreamCompute instance. This you can do using 
- .. code:: 
-     sudo apt-get install python^
+This Trellis server setup on a DreamCompute instance is best done using a Ubuntu 14.0.4 image on DreamCompute. You can also use a more recent version of Ubuntu, Ubuntu 16.0.4. However, you will then be forced to install an older version of Python side by side with Python 3 on your DreamCompute instance. This you can do using: 
+
+.. code:: 
+
+    sudo apt-get install python^
 
 If you do not mind this extra step then do go ahead. Always nice to run a more recent Ubuntu version, isn't it?
 
@@ -34,39 +36,19 @@ Locally you do also have to have several things running and to be able to push t
 
 Ansible is both needed for setting up a remote server for staging or production on DreamCompute. Git will also be needed as well as the latest Python 2.x version for running Ansible
 
-Installing LAMP
+Installing Locally
 ~~~~~~~~~~~~~~~
 
-While you certainly can install everything on it's own, the LAMP stack for
-Ubuntu is perfect for WordPress. If necessary, you can follow the directions
-on `how to configure LAMP
-<215879467-How-to-Configure-LAMP-on-DreamCompute-running-Debian-or-Ubuntu>`_
-but the overview is as follows:
+How you install things locally depends partly on your operating system and is not really part of this tutorial. I recommend following the Trellis documentation on this `here
+<https://roots.io/trellis/docs/local-development-setup/>`_
+. Just remember the earlier mentioned prerequitsites. Without those on your local server or PC you won't be able to get things started. 
 
-.. code::
+Setting Up Your Instance
+~~~~~~~~~~~~~
 
-    sudo apt-get install lamp-server^
+Go to your DreamCompute Dashboard and pick Ubuntu from the list under images. As said 14.0.4 will work right out of the box. Ubuntu 16.0.4 will need the Python 2.x (older version) installed. Also, as mentioned it will be good to create it as a volume (clicking the arrow next to launch instance will show this option)
 
-This is interactive, so you’ll be asked ‘are you sure?’ in some places, and
-in others it will want a password for SQL. Make up a secure password for SQL
-and save it as you will need this later to set up SQL for WordPress.
-
-After it runs, you’ll want to add mod_rewrite so WordPress can make pretty
-pages:
-
-.. code::
-
-    sudo a2enmod rewrite
-
-Finally restart apache:
-
-.. code::
-
-    sudo service apache2 restart
-
-At this point, your server will be accessible via its IP address.
-
-Create a User
+Provisoning Your DreamCompute Instance
 ~~~~~~~~~~~~~
 
 While it's not required to make a separate user ID for WordPress, it's strongly

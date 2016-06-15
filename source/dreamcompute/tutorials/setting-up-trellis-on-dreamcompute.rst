@@ -69,6 +69,15 @@ How you install things locally depends partly on your operating system (OSX, Lin
         cache:
           enabled: false
 
+For the other files like vault.yml we again refer to the documentation.          
+
+
+Bedrock
+*************
+
+And for working with Bedrock - Modern WordPress Stack - which is really recommended we recommend you checking out the docs `here
+<https://roots.io/bedrock/>`_ .
+
 
 Setting Up Your Instance
 ~~~~~~~~~~~~~
@@ -97,11 +106,15 @@ Trellis works best with passwordless SSH login so do make sure you have added yo
 
 
 Configuration Files
-~~~~~~
+~~~~~~~~~~
 
-Let's say you work locally and on production only and have worked out things locally. The you only need to setup wordpress_sites.yml for provisioning your remote server - setting up remote server documention `here
+Let's say you work locally and on production only and have worked out things locally. Then you only need to set up / edit a couple of files for provisioning your remote server - setting up remote server documention `here
 <https://roots.io/trellis/docs/remote-server-setup/>`_
-.This file is located under trellis/group_vars/production. In this file you need to change the following:
+
+WordPress Sites
+*************
+
+The first one to begin with is wordpress_sites.yml. This file is located under trellis/group_vars/production. In this file you need to change the following:
 
 * name of site
 * site_hosts

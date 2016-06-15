@@ -136,6 +136,20 @@ Once you have the remote setup configured properly you can go ahead and push to 
 
 Here *environment* will be production if you are pushing to production. staging is the other option.
 
+Now under trellis open hosts/production. That is a file where you add your host details for making the real connection. If you do forget it you will net be able to connect and sometimes not get any errors at all. Here is an example
+
+.. code::
+
+    # Add each host to the [production] group and to a "type" group such as [web] or [db].
+    # List each machine only once per [group], even if it will host multiple sites.
+
+    [production]
+    domain.com
+
+    [web]
+    domain.com
+
+
 Wait, there is one more important file to attend to located in trellis/group_vars/all. That is users.yml. DreamCompute does not work with root but with the user dhc-user and that should be reflected in this file:
 
 .. code::

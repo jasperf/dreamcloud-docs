@@ -89,8 +89,7 @@ Let's say you work locally and on production only and have worked out things loc
 * cache enabled or not
 
 Once that is done you also need to edit vault.yml - extended documention `here
-<https://roots.io/trellis/docs/vault/>`_
- under trellis/group_vars/production. There you have to add:
+<https://roots.io/trellis/docs/vault/>`_ under trellis/group_vars/production. There you have to add:
 
 
 * vault_mysql_root_password
@@ -110,7 +109,7 @@ Generate your keys here: https://roots.io/salts.html
 
 Once you have the remote setup configured properly you can go ahead and push to the remote server using
 
-:code ::
+.. code ::
     ansible-playbook server.yml -e env=<environment>
 
 Here environment will be production if you are pushing to production. staging is the other option.
@@ -126,4 +125,4 @@ Issues setting up Trellis
 If you do run into issues ask a question at Roots Discourse `here
 <https://discourse.roots.io/c/trellis>`_
 This is the dedicated forum sub section for Trellis and that is where you can find the experts you need debuggig issues. Many errors with possible solution can also be found `here
-<https://imagewize.com/web-development/roots-trellis-errors/>`_
+<https://imagewize.com/web-development/roots-trellis-errors/>`_ .

@@ -110,6 +110,9 @@ Let's say you work locally and on production only and have worked out things loc
 * ssl or not and which provider
 * cache enabled or not
 
+Vault
+*************
+
 Once that is done you also need to edit vault.yml - extended documention `here
 <https://roots.io/trellis/docs/vault/>`_ under trellis/group_vars/production. There you have to add:
 
@@ -128,13 +131,9 @@ Once that is done you also need to edit vault.yml - extended documention `here
 
 Generate your keys here: https://roots.io/salts.html
 
-Once you have the remote setup configured properly you can go ahead and push to the remote server using
 
-.. code::
-
-    ansible-playbook server.yml -e env=<environment>
-
-Here *environment* will be production if you are pushing to production. staging is the other option.
+Hosts
+*************
 
 Now under trellis open hosts/production. That is a file where you add your host details for making the real connection. If you do forget it you will net be able to connect and sometimes not get any errors at all. Here is an example
 
@@ -149,6 +148,9 @@ Now under trellis open hosts/production. That is a file where you add your host 
     [web]
     domain.com
 
+
+Users
+*************
 
 Wait, there is one more important file to attend to located in trellis/group_vars/all. That is users.yml. DreamCompute does not work with root but with the user dhc-user and that should be reflected in this file:
 
@@ -177,7 +179,19 @@ Wait, there is one more important file to attend to located in trellis/group_var
 
 Everything else in this file can stay the same.
 
+Push to Remote
+*************
+
+Once you have the remote setup configured properly you can go ahead and push to the remote server using
+
+.. code::
+
+    ansible-playbook server.yml -e env=<environment>
+
+Here *environment* will be production if you are pushing to production. staging is the other option.
+
 **Note** Please understand that provisioning will take quite some time as a full stack server will be installed with Nginx, MariaDB, PHP 7 and beautiful things such as SSL, HTTP2 and so on. Also it takes care of setting up WordPress on the server. All in all a pretty great feat.
+
 
 Deploying your site to DreamCompute
 ~~~~~~~~~~~~~

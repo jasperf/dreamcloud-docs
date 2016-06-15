@@ -90,13 +90,13 @@ Let's say you work locally and on production only and have worked out things loc
 
 Once that is done you also need to edit vault.yml - extended documention `here
 <https://roots.io/trellis/docs/vault/>`_
- - under trellis/group_vars/production. There you have to add:
+ under trellis/group_vars/production. There you have to add:
 
 
 * vault_mysql_root_password
 * vault_wordpress_sites - same as in wordpress_sites.yml
 * envs such as:
-      db_password:
+      db_password
       auth_key
       secure_auth_key
       logged_in_key

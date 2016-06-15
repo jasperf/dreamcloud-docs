@@ -54,6 +54,7 @@ How you install things locally depends partly on your operating system (OSX, Lin
 <https://roots.io/trellis/docs/wordpress-sites/>`_ . But a bare minimal example of wordpress_sites.yml for development would be:
 
 .. code::
+
     # group_vars/development/wordpress_sites.yml
     wordpress_sites:
       example.com:

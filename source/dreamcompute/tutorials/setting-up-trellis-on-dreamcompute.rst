@@ -148,7 +148,7 @@ Generate your keys here: https://roots.io/salts.html
 Hosts
 *************
 
-Now under trellis open hosts/production. That is a file where you add your host details for making the real connection. If you do forget it you will net be able to connect and sometimes not get any errors at all. Here is an example
+Now under trellis open hosts/production. That is a file where you add your host details for making the real connection. If you do forget it you will net be able to connect and sometimes not get any errors at all. Here is an example:
 
 .. code::
 
@@ -161,6 +161,7 @@ Now under trellis open hosts/production. That is a file where you add your host 
     [web]
     domain.com
 
+You can either add the domain connected to the DreamCompute public ip address using an A record or use the ip address itself.
 
 Users
 *************
@@ -211,7 +212,7 @@ Deploying your site to DreamCompute
 
 You have to realize that provisioning is just setting up your server for working with WordPress really well and at lightning speed. The instance is still not loading a site at all and going to the ip address or domain will show you a nice Nginx 404 as nothing can be found. You simply need to push your locally deployed WordPress site to the server still. Once that is done you will see remotely what you see locally.
 
-For deploys, there's a couple more settings needed:
+For deploys, there's a couple more settings needed besides the ones you did for provisioning:
 
 * repo (required) - git URL of your Bedrock-based WordPress project (in SSH format: git@github.com:roots/bedrock.git)
 * repo_subtree_path (optional) - relative path to your Bedrock/WP directory in your repo if its not the root (like site in roots-example-project)

@@ -192,7 +192,7 @@ Wait, there is one more important file to attend to located in trellis/group_var
 
 Everything else in this file can stay the same.
 
-Push to Remote
+Push to Remote DreamCompute Instance
 *************
 
 Once you have the remote setup configured properly you can go ahead and push to the remote server using

@@ -51,7 +51,22 @@ Local Setup
 How you install things locally depends partly on your operating system (OSX, Linux, Windows) and is not really part of this tutorial as we focus on the DreamCompute part of things. I recommend following the Trellis documentation on this `here
 <https://roots.io/trellis/docs/local-development-setup/>`_
 . Just remember the earlier mentioned prerequitsites. Without those on your local server or PC you won't be able to get things started. This and the proper changes in the Trellis configuration files for setting up a site locally and remotely the way you want. See documentation on this `here
-<https://roots.io/trellis/docs/wordpress-sites/>`_
+<https://roots.io/trellis/docs/wordpress-sites/>`_ . But a bare minimal example of wordpress_sites.yml for development would be:
+
+.. code::
+    # group_vars/development/wordpress_sites.yml
+    wordpress_sites:
+      example.com:
+        site_hosts:
+          - example.dev
+        local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
+        admin_email: admin@example.dev
+        multisite:
+          enabled: false
+        ssl:
+          enabled: false
+        cache:
+          enabled: false
 
 
 Setting Up Your Instance
@@ -73,6 +88,12 @@ Provisoning Your DreamCompute Instance
 ~~~~~~~~~~~~~
 
 Provisioning Trellis means setting up the actual LEMP stack for your staging or production website. Staging and Production do not differ much. Do remember you need a separate instance for both though! Provisioning you normally do once you have worked out the proper site setup and have setup things locally.
+
+Trellis works best with passwordless SSH login so do make sure you have added your public SSH key in the DreamCompute Dashboard.
+
+    "We assume that when you first create your server you've already added your SSH key to the root account. Digital Ocean will add this for you when you create a droplet. If you don't want to use an SSH key, you will need to add the --ask-pass option each time you run the server.yml playbook."
+
+
 
 Configuration Files
 ~~~~~~

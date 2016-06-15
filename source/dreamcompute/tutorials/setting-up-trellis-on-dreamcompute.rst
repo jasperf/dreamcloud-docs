@@ -79,7 +79,7 @@ Configuration Files
 
 Let's say you work locally and on production only and have worked out things locally. The you only need to setup wordpress_sites.yml for provisioning your remote server - setting up remote server documention `here
 <https://roots.io/trellis/docs/remote-server-setup/>`_
-. This file is located under trellis/group_vars/production. In this file you need to change the following:
+.This file is located under trellis/group_vars/production. In this file you need to change the following:
 
 * name of site
 * site_hosts

@@ -118,7 +118,7 @@ The first one to begin with is wordpress_sites.yml. This file is located under t
 
 * name of site
 * site_hosts
-* repo
+* repo (Github repo for example)
 * multisite or not
 * ssl or not and which provider
 * cache enabled or not

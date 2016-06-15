@@ -30,12 +30,12 @@ Trellis is a set of Ansible playbooks that help you setup a full local, staging 
 Locally it works with an automated Vagrant setup and remotely for staging it sets you up with a full fledged WordPress server. It also helps you to deploy your WordPress site once you are ready to do so.
 
 
-Installing Locally
+Requirements
 ~~~~~~~~~~~~~~~
 
-Locally you do have to have several `requirements
+Locally there are several `requirements
 <https://roots.io/trellis/docs/installing-trellis/>`_
- to work with Trellis:
+to work with Trellis and to be able to work remotely:
 
 * Ansible 2.0.2.0
 * Virtualbox >= 4.3.10
@@ -43,7 +43,7 @@ Locally you do have to have several `requirements
 * vagrant-bindfs >= 0.3.1 (Windows users may skip this if not using vagrant-winnfsd for folder sync)
 * vagrant-hostmanager
 
-**NB** Ansible is both needed for setting up a remote server for staging or production on DreamCompute. Git will also be needed as well as the latest Python 2.x version for running Ansible
+**NB** Ansible is both needed for setting up a remote server for staging or production on DreamCompute. Git will also be needed as well as the latest Python 2.x version for running Ansible 2.0.2.0
 
 How you install things locally depends partly on your operating system (OSX, Linux, Windows) and is not really part of this tutorial as we focus on the DreamCompute part of things. I recommend following the Trellis documentation on this `here
 <https://roots.io/trellis/docs/local-development-setup/>`_
@@ -91,7 +91,6 @@ Once that is done you also need to edit vault.yml - extended documention `here
 * vault_wordpress_sites - same as in wordpress_sites.yml
 * envs such as:
       db_password:
-      # Generate your keys here: https://roots.io/salts.html
       auth_key
       secure_auth_key
       logged_in_key
@@ -100,6 +99,21 @@ Once that is done you also need to edit vault.yml - extended documention `here
       secure_auth_salt
       logged_in_salt
       nonce_salt
+
+Generate your keys here: https://roots.io/salts.html
+
+Once you have the remote setup configured properly you can go ahead and push to the remote server using
+
+:code ::
+    ansible-playbook server.yml -e env=<environment>
+
+Here environment will be production if you are pushing to production. staging is the other option.
+
+**Note** Please understand that provisioning will take quite some time as a full stack server will be installed with Nginx, MariaDB, PHP 7 and beautiful things such as SSL, HTTP2 and so on. Also it takes care of setting up WordPress on the server. All in all a pretty great feat.
+
+Deploying your site to DreamCompute
+~~~~~~~~~~~~~
+
 
 Issues setting up Trellis
 ~~~~~~~~~~~~~

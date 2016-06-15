@@ -77,8 +77,10 @@ Provisioning Trellis means setting up the actual LEMP stack for your staging or 
 Configuration Files
 ~~~~~~
 
-Let's say you work locally and on production only and have worked out things locally. The you only need to setup wordpress_sites.yml for provisioning your remote server - setting up remote server documention `here
-<https://roots.io/trellis/docs/remote-server-setup/>`_
+Let's say you work locally and on production only and have worked out things locally. The you only need to setup wordpress_sites.yml for provisioning your remote server - setting up remote server documention here_
+
+.. _here :https://roots.io/trellis/docs/remote-server-setup/
+
 .This file is located under trellis/group_vars/production. In this file you need to change the following:
 
 * name of site

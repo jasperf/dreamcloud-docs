@@ -93,7 +93,7 @@ Once that is done you also need to edit vault.yml - extended documention `here
 
 
 * vault_mysql_root_password
-* vault_wordpress_sites - same as in wordpress_sites.yml
+* vault_wordpress_sites (same as in wordpress_sites.yml)
 * envs such as:
       db_password
       auth_key

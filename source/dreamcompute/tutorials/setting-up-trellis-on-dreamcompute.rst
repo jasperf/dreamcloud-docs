@@ -108,14 +108,16 @@ Generate your keys here: https://roots.io/salts.html
 
 Once you have the remote setup configured properly you can go ahead and push to the remote server using
 
-.. code ::
+.. code::
+
     ansible-playbook server.yml -e env=<environment>
 
 Here *environment* will be production if you are pushing to production. staging is the other option.
 
 Wait, there is one more important file to attend to located in trellis/group_vars/all. That is users.yml. DreamCompute does not work with root but with the user dhc-user and that should be reflected in this file:
 
-.. code ::
+.. code::
+
     # Documentation: https://roots.io/trellis/docs/ssh-keys/
     admin_user: dhc-user
     # Also define 'vault_sudoer_passwords' (`group_vars/staging/vault.yml`, `group_vars/production/vault.yml`)

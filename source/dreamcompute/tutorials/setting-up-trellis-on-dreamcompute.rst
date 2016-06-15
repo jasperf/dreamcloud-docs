@@ -211,6 +211,22 @@ Deploying your site to DreamCompute
 
 You have to realize that provisioning is just setting up your server for working with WordPress really well and at lightning speed. The instance is still not loading a site at all and going to the ip address or domain will show you a nice Nginx 404 as nothing can be found. You simply need to push your locally deployed WordPress site to the server still. Once that is done you will see remotely what you see locally.
 
+For deploys, there's a couple more settings needed:
+
+* repo (required) - git URL of your Bedrock-based WordPress project (in SSH format: git@github.com:roots/bedrock.git)
+* repo_subtree_path (optional) - relative path to your Bedrock/WP directory in your repo if its not the root (like site in roots-example-project)
+* branch (optional) - the git branch to deploy (default: master)
+
+You can deploy with a single command:
+
+.. code::
+    
+    ./deploy.sh <environment> <domain>
+    
+where the environment can again be staging or production .
+
+**NB** All the files to setup WordPress including the possible theme files added by you will be added, but the whole WordPress site will not be setup. This so you can either decide to install a fresh copy or import your own database.
+
 Issues setting up Trellis
 ~~~~~~~~~~~~~
 

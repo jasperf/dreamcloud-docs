@@ -7,7 +7,7 @@ Trellis
 
 In this tutorial we are going to use `Trellis
 <https://roots.io/trellis/>`_
-to install a very sold modern LEMP stack on DreamCompute. This stack is great to run WordPress websites and works well with `Bedrock
+to install a very sold modern LEMP stack on DreamCompute. This LEMP stack by Roots is great to run WordPress websites and works well with `Bedrock
 <https://roots.io/bedrock/>`_
 , the modern WordPress stack. 
 
@@ -45,7 +45,7 @@ to work with Trellis locally and to be able to work on the remote server:
 
 **NOTES** 
 
-Ansible is both needed for setting up a remote server for staging or production on DreamCompute. Git will also be needed as well as the latest Python 2.x version for running Ansible 2.0.2.0.
+Ansible is both needed for setting up a remote server for staging or production on DreamCompute. Git and an accesible online repo will also be needed as well as the latest Python 2.x version for running Ansible 2.0.2.0.
 
 On Ubuntu most if not alll of these tools can be installed using the package manager apt-get. On OSX Homebrew and Pip are your friends. On Windows more Linux tools have become available with the latest version such as Bash and other needed dependencies can be installed as well using various tools. Tougher though than on Nix systems as you can read `here
 <https://roots.io/trellis/docs/windows/>`_ .

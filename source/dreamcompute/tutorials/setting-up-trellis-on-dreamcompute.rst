@@ -138,8 +138,7 @@ This is basically the same for setting things up locally so if you did that well
 Vault
 *****
 
-Once that is done you also need to edit vault.yml - extended documention `here
-<https://roots.io/trellis/docs/vault/>`_ under trellis/group_vars/production. There you have to add:
+Once that is done you also need to edit vault.yml - extended documention at<https://roots.io/trellis/docs/vault/> under trellis/group_vars/production. There you have to add:
 
 
 * vault_mysql_root_password

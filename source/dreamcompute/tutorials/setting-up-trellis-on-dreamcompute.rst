@@ -133,6 +133,8 @@ The first one to begin with is wordpress_sites.yml. This file is located under t
 * ssl or not and which provider
 * cache enabled or not
 
+This is basically the same for setting things up locally so if you did that well, this should work out just fine.
+
 Vault
 *************
 
@@ -152,13 +154,14 @@ Once that is done you also need to edit vault.yml - extended documention `here
 * logged_in_salt
 * nonce_salt
 
-Generate your keys here: https://roots.io/salts.html
+Generate your keys here at the Roots `salts generator
+<https://roots.io/salts.html>`_ .
 
 
 Hosts
 *************
 
-Now under trellis open hosts/production. That is a file where you add your host details for making the real connection. If you do forget it you will net be able to connect and sometimes not get any errors at all. Here is an example:
+Now under the trellis folder open hosts/production. That is a file where you add your host details for making the real connection. If you do forget it you will net be able to connect and sometimes not get any errors at all. Here is an example:
 
 .. code::
 
@@ -171,7 +174,8 @@ Now under trellis open hosts/production. That is a file where you add your host 
     [web]
     domain.com
 
-You can either add the domain connected to the DreamCompute public ip address using an A record or use the ip address itself.
+You can either add the domain connected to the DreamCompute public ip address using an A record or use the ip address itself. Better connect the domain to your instance before you provision. See Dreamhost KB article `here
+<https://help.dreamhost.com/hc/en-us/articles/215414867-How-do-I-add-custom-DNS-records->`_ .
 
 Users
 *************

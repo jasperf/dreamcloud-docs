@@ -45,9 +45,9 @@ to work with Trellis locally and to be able to work on the remote server:
 
 **NOTES** 
 
-Ansible is both needed for setting up a remote server for staging or production on DreamCompute. Git will also be needed as well as the latest Python 2.x version for running Ansible 2.0.2.0. 
+Ansible is both needed for setting up a remote server for staging or production on DreamCompute. Git will also be needed as well as the latest Python 2.x version for running Ansible 2.0.2.0.
 
-On Ubuntu most if not alll of these tools can be installed using the package manager apt-get. On OSX Homebrew and Pip are your friends. On Windows more Linux tools have become available with the latest version such as Bash and other needed dependencies can be installed as well. Tougher though than on Nix systems as you can read `here
+On Ubuntu most if not alll of these tools can be installed using the package manager apt-get. On OSX Homebrew and Pip are your friends. On Windows more Linux tools have become available with the latest version such as Bash and other needed dependencies can be installed as well using various tools. Tougher though than on Nix systems as you can read `here
 <https://roots.io/trellis/docs/windows/>`_ .
 
 Local Setup
@@ -55,7 +55,7 @@ Local Setup
 
 How you install things locally depends partly on your operating system (OSX, Linux, Windows) and is not really part of this tutorial as we focus on the DreamCompute part of things. I recommend following the Trellis documentation on this `here
 <https://roots.io/trellis/docs/local-development-setup/>`_
-. Just remember the earlier mentioned prerequitsites. Without those on your local server or PC you won't be able to get things started. This and the proper changes in the Trellis configuration files for setting up a site locally and remotely the way you want. See documentation on this `here
+. Just remember the earlier mentioned prerequisites. Without those on your local server or PC you won't be able to get things started. This and the proper changes in the Trellis configuration files for setting up a site locally and remotely the way you want. See documentation on this `here
 <https://roots.io/trellis/docs/wordpress-sites/>`_ . But a bare minimal example of wordpress_sites.yml for development would be:
 
 .. code::
@@ -81,13 +81,13 @@ Bedrock
 *************
 
 And for working with Bedrock - Modern WordPress Stack - which is really recommended we recommend you checking out the docs `here
-<https://roots.io/bedrock/>`_ .
+<https://roots.io/bedrock/>`_ . Just great to have a WordPress Stack with a logical file structure, dependency manager with Composer, easy WordPress condiguration and enhanced security!
 
 
 Setting Up Your Instance
 ~~~~~~~~~~~~~
 
-Go to your DreamCompute Dashboard and pick Ubuntu from the list under images. This Trellis server setup on a DreamCompute instance is best done using a Ubuntu 14.0.4 image on DreamCompute. You can also use a more recent version of Ubuntu, Ubuntu 16.0.4. However, you will then be forced to install an older version of Python side by side with Python 3 on your DreamCompute instance. This you can do using: 
+Go to your DreamCompute Dashboard and pick Ubuntu from the list under images. This Trellis server setup on a DreamCompute instance is best done using a Ubuntu 14.0.4 image on DreamCompute. You can also use a more recent version of Ubuntu, Ubuntu 16.0.4. However, you will then be forced to install an older version of Python - 2.x - side by side with Python 3 on your DreamCompute instance. This you can do using: 
 
 .. code:: 
 
@@ -102,13 +102,16 @@ Whichever Ubuntu version you pick, remember it's better to boot volume backed in
 Provisoning Your DreamCompute Instance
 ~~~~~~~~~~~~~
 
-Provisioning Trellis means setting up the actual LEMP stack for your staging or production website. Staging and Production do not differ much. Do remember you need a separate instance for both though! Provisioning you normally do once you have worked out the proper site setup and have setup things locally.
+Provisioning Trellis means setting up the actual LEMP stack for your staging or production website. Staging and Production do not differ much. Do remember you need a separate instance for both though! 
+**NB** Provisioning you normally do once you have worked out the proper site setup and have setup things locally.
 
+Passwordless SSH
+****************
 Trellis works best with passwordless SSH login so do make sure you have added your public SSH key in the DreamCompute Dashboard.
 
     "We assume that when you first create your server you've already added your SSH key to the root account. Digital Ocean will add this for you when you create a droplet. If you don't want to use an SSH key, you will need to add the --ask-pass option each time you run the server.yml playbook."
 
-
+Also make sure the file trellis/group_vars/all/users.yml has the proper path to you SSH key
 
 Configuration Files
 ~~~~~~~~~~

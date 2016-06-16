@@ -3,7 +3,7 @@ Step-by-step guide to set up Trellis on DreamCompute
 ======================================================
 
 Trellis
-~~~~~~~~~~~~
+~~~~~~~
 
 In this tutorial we are going to use `Trellis
 <https://roots.io/trellis/>`_
@@ -12,7 +12,7 @@ to install a very sold modern LEMP stack on DreamCompute. This LEMP stack by Roo
 , the modern WordPress stack. 
 
 Modern LEMP Stack
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 Trellis is a set of Ansible playbooks that help you setup a full local, staging and development environment for your WordPress project. With it you will have a WordPress ready server running locally or remotely (intention in this totorial) with:
 
@@ -31,7 +31,7 @@ Locally it works with an automated Vagrant setup and remotely for staging it set
 
 
 Requirements
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~~
 
 There are several `requirements
 <https://roots.io/trellis/docs/installing-trellis/>`_
@@ -51,7 +51,7 @@ On Ubuntu most if not alll of these tools can be installed using the package man
 <https://roots.io/trellis/docs/windows/>`_ .
 
 Local Setup
-~~~~~~~~~~~~~
+~~~~~~~~~~~
 
 How you install things locally depends partly on your operating system (OSX, Linux, Windows) and is not really part of this tutorial as we focus on the DreamCompute part of things. I recommend following the Trellis documentation on this `here
 <https://roots.io/trellis/docs/local-development-setup/>`_
@@ -78,14 +78,14 @@ An example you need to edit to suit your needs. For the other files that need up
 
 
 Bedrock
-*************
+*******
 
 For working with Bedrock - a Modern WordPress Stack - which is really recommended we recommend you checking out the docs `here
 <https://roots.io/bedrock/>`_ . Just great to have a WordPress Stack with a logical file structure, dependency management with Composer, easy WordPress configuration and enhanced security!
 
 
 Setting Up Your Instance
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Go to your DreamCompute Dashboard and pick Ubuntu from the list under images. This Trellis server setup on a DreamCompute instance is best done using a Ubuntu 14.0.4 image on DreamCompute. You can also use a more recent version of Ubuntu, Ubuntu 16.0.4. However, you will then be forced to install an older version of Python - 2.x - side by side with Python 3 on your DreamCompute instance. This you can do using: 
 
@@ -100,7 +100,7 @@ Whichever Ubuntu version you pick, remember it's better to boot volume backed in
 
 
 Provisoning Your DreamCompute Instance
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Provisioning Trellis means setting up the actual LEMP stack for your staging or production website. Staging and Production do not differ much. Do remember you need a separate instance for both though! 
 **NB** Provisioning you normally do once you have worked out the proper site setup and have setup things locally.
@@ -116,13 +116,13 @@ DreamCompute allows you to add your key in the DC Dashboard under Access & Secur
 Also make sure the file trellis/group_vars/all/users.yml has the proper path to you SSH key on your box and that that is the one you added to the DreamCompute Dashboard.
 
 Configuration Files
-~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 Let's say you work locally and on production only and have worked out things locally. Then you only need to set up / edit a couple of files for provisioning your remote server - setting up remote server documention `here
 <https://roots.io/trellis/docs/remote-server-setup/>`_
 
 WordPress Sites
-*************
+***************
 
 The first one to begin with is wordpress_sites.yml. This file is located under trellis/group_vars/production. In this file you need to change the following:
 
@@ -136,7 +136,7 @@ The first one to begin with is wordpress_sites.yml. This file is located under t
 This is basically the same for setting things up locally so if you did that well, this should work out just fine.
 
 Vault
-*************
+*****
 
 Once that is done you also need to edit vault.yml - extended documention `here
 <https://roots.io/trellis/docs/vault/>`_ under trellis/group_vars/production. There you have to add:
@@ -159,7 +159,7 @@ Generate your keys here at the Roots `salts generator
 
 
 Hosts
-*************
+*****
 
 Now under the trellis folder open hosts/production. That is a file where you add your host details for making the real connection. If you do forget it you will net be able to connect and sometimes not get any errors at all. Here is an example:
 
@@ -178,7 +178,7 @@ You can either add the domain connected to the DreamCompute public ip address us
 <https://help.dreamhost.com/hc/en-us/articles/215414867-How-do-I-add-custom-DNS-records->`_ .
 
 Users
-*************
+*****
 
 Wait, there is one more important file to attend to located in trellis/group_vars/all. That is users.yml. DreamCompute does not work with root but with the user dhc-user and that should be reflected in this file:
 
@@ -208,7 +208,7 @@ Wait, there is one more important file to attend to located in trellis/group_var
 Everything else in this file can stay the same. Do notice where it is grabbing the SSH keys from. If you have keys with a different name or located elsewhere you do need to change those lines as well.
 
 Push to Remote DreamCompute Instance
-*************
+************************************
 
 Once you have the remote setup configured properly you can go ahead and push to the remote server using
 
@@ -222,7 +222,7 @@ Here *environment* will be production if you are pushing to production. staging 
 
 
 Deploying your site to DreamCompute
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You have to realize that provisioning is just setting up your server for working with WordPress really well and at lightning speed. The instance is still not loading a site at all and going to the ip address or domain will show you a nice Nginx 404 as nothing can be found. You simply need to push your locally deployed WordPress site to the server still. Once that is done you still either have to go through the installation process or import and existing database.
 
@@ -245,7 +245,7 @@ Make sure you have SSH Agent forwarding set up properly. Read more on it `here
 <https://developer.github.com/guides/using-ssh-agent-forwarding/>`_ .
 
 Issues setting up Trellis
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you do run into issues ask a question at Roots Discourse `here
 <https://discourse.roots.io/c/trellis>`_

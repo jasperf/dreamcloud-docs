@@ -14,7 +14,7 @@ to install a very sold modern LEMP stack on DreamCompute. This stack is great to
 Modern LEMP Stack
 ~~~~~~~~~~~~~~~
 
-Trellis is a set of Ansible playbooks that help you setup a full local, staging and development environment for your project. With it you will have a WordPress ready server running locally or remotely (intention in this totorial) with:
+Trellis is a set of Ansible playbooks that help you setup a full local, staging and development environment for your WordPress project. With it you will have a WordPress ready server running locally or remotely (intention in this totorial) with:
 
 * Nginx
 * MariaDB (MySQL drop-in replacement)
@@ -33,9 +33,9 @@ Locally it works with an automated Vagrant setup and remotely for staging it set
 Requirements
 ~~~~~~~~~~~~~~~
 
-Locally there are several `requirements
+There are several `requirements
 <https://roots.io/trellis/docs/installing-trellis/>`_
-to work with Trellis and to be able to work remotely:
+to work with Trellis locally and to be able to work on the remote server:
 
 * Ansible 2.0.2.0
 * Virtualbox >= 4.3.10
@@ -43,7 +43,12 @@ to work with Trellis and to be able to work remotely:
 * vagrant-bindfs >= 0.3.1 (Windows users may skip this if not using vagrant-winnfsd for folder sync)
 * vagrant-hostmanager
 
-**NB** Ansible is both needed for setting up a remote server for staging or production on DreamCompute. Git will also be needed as well as the latest Python 2.x version for running Ansible 2.0.2.0
+**NOTES** 
+
+Ansible is both needed for setting up a remote server for staging or production on DreamCompute. Git will also be needed as well as the latest Python 2.x version for running Ansible 2.0.2.0. 
+
+On Ubuntu most if not alll of these tools can be installed using the package manager apt-get. On OSX Homebrew and Pip are your friends. On Windows more Linux tools have become available with the latest version such as Bash and other needed dependencies can be installed as well. Tougher though than on Nix systems as you can read `here
+<https://roots.io/trellis/docs/windows/>`_ .
 
 Local Setup
 ~~~~~~~~~~~~~

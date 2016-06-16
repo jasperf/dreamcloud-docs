@@ -235,7 +235,7 @@ You can deploy with a single command:
 where the environment can again be staging or production .
 
 **NOTE** 
-Make sure you have SSH Agent forwarding set up properly. Read more on it here`
+Make sure you have SSH Agent forwarding set up properly. Read more on it `here
 <https://developer.github.com/guides/using-ssh-agent-forwarding/>`_ .
 
 Issues setting up Trellis

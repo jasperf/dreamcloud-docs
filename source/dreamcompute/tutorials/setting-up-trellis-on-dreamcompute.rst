@@ -240,13 +240,13 @@ You can deploy with a single command:
 where the environment can again be staging or production .
 
 **NOTE** 
-Make sure you have SSH Agent forwarding set up properly. Read more on it `here
-<https://developer.github.com/guides/using-ssh-agent-forwarding/>`_ .
+Make sure you have SSH Agent forwarding set up properly. Read more on it at the `Using SSH Agent Forwarding
+<https://developer.github.com/guides/using-ssh-agent-forwarding/>`_ article at Github.
 
 Issues setting up Trellis
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you do run into issues ask a question at Roots Discourse `here
+If you do run into issues ask a question at `Roots Discourse
 <https://discourse.roots.io/c/trellis>`_
 This is the dedicated forum sub section for Trellis and that is where you can find the experts you need debuggig issues. Many errors with possible solution can also be found `here
 <https://imagewize.com/web-development/roots-trellis-errors/>`_ .

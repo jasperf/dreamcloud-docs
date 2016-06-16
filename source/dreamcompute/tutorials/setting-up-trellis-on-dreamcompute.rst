@@ -74,14 +74,14 @@ How you install things locally depends partly on your operating system (OSX, Lin
         cache:
           enabled: false
 
-For the other files like vault.yml we again refer to the documentation.          
+An example you need to edit to suit your needs. For the other files that need updating like vault.yml we again refer to the documentation.
 
 
 Bedrock
 *************
 
-And for working with Bedrock - Modern WordPress Stack - which is really recommended we recommend you checking out the docs `here
-<https://roots.io/bedrock/>`_ . Just great to have a WordPress Stack with a logical file structure, dependency manager with Composer, easy WordPress condiguration and enhanced security!
+For working with Bedrock - a Modern WordPress Stack - which is really recommended we recommend you checking out the docs `here
+<https://roots.io/bedrock/>`_ . Just great to have a WordPress Stack with a logical file structure, dependency management with Composer, easy WordPress configuration and enhanced security!
 
 
 Setting Up Your Instance
@@ -111,7 +111,9 @@ Trellis works best with passwordless SSH login so do make sure you have added yo
 
     "We assume that when you first create your server you've already added your SSH key to the root account. Digital Ocean will add this for you when you create a droplet. If you don't want to use an SSH key, you will need to add the --ask-pass option each time you run the server.yml playbook."
 
-Also make sure the file trellis/group_vars/all/users.yml has the proper path to you SSH key
+DreamCompute allows you to add your key in the DC Dashboard under Access & Security > Key Pairs. 
+
+Also make sure the file trellis/group_vars/all/users.yml has the proper path to you SSH key on your box and that that is the one you added to the DreamCompute Dashboard.
 
 Configuration Files
 ~~~~~~~~~~

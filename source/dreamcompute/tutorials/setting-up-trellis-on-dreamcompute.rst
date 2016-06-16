@@ -218,9 +218,9 @@ Here *environment* will be production if you are pushing to production. staging 
 Deploying your site to DreamCompute
 ~~~~~~~~~~~~~
 
-You have to realize that provisioning is just setting up your server for working with WordPress really well and at lightning speed. The instance is still not loading a site at all and going to the ip address or domain will show you a nice Nginx 404 as nothing can be found. You simply need to push your locally deployed WordPress site to the server still. Once that is done you will see remotely what you see locally.
+You have to realize that provisioning is just setting up your server for working with WordPress really well and at lightning speed. The instance is still not loading a site at all and going to the ip address or domain will show you a nice Nginx 404 as nothing can be found. You simply need to push your locally deployed WordPress site to the server still. Once that is done you still either have to go through the installation process or import and existing database.
 
-For deploys, there's a couple more settings needed besides the ones you did for provisioning:
+For deploys, there are a couple more settings needed besides the ones you did for provisioning:
 
 * repo (required) - git URL of your Bedrock-based WordPress project (in SSH format: git@github.com:roots/bedrock.git)
 * repo_subtree_path (optional) - relative path to your Bedrock/WP directory in your repo if its not the root (like site in roots-example-project)
@@ -234,7 +234,7 @@ You can deploy with a single command:
     
 where the environment can again be staging or production .
 
-**NOTES** All the files to setup WordPress including the possible theme files added by you will be added, but the whole WordPress site will not be setup. This so you can either decide to install a fresh copy or import your own database.
+**NOTE** 
 Make sure you have SSH Agent forwarding set up properly. Read more on it here`
 <https://developer.github.com/guides/using-ssh-agent-forwarding/>`_ .
 

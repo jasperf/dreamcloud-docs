@@ -233,6 +233,7 @@ Let's say you work locally and on production only and have worked out
 things locally. Then you only need to set up / edit a couple of files for 
 provisioning your remote server - `setting up remote server documention
 <https://roots.io/trellis/docs/remote-server-setup/>`_
+**NB** You can most of the time just copy data from the local development files.
 
 WordPress Sites
 ***************
@@ -341,8 +342,14 @@ located elsewhere you do need to change those lines as well.
 Push to Remote DreamCompute Instance
 ************************************
 
-Once you have the remote setup configured properly you can go ahead and 
-push to the remote server using
+Double check you have done the following:
+
+* Configure your WordPress sites in group_vars/<environment>/wordpress_sites.yml 
+* configure all in in group_vars/<environment>/vault.yml (see the Vault docs for how to encrypt files containing passwords)
+* Add your server IP/hostnames to hosts/<environment>
+* Specify public SSH keys for users in group_vars/all/users.yml (see the SSH Keys docs)
+
+When all that is good you can go ahead and push to the remote server using:
 
 .. code::
 

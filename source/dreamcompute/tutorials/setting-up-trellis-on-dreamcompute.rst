@@ -61,39 +61,8 @@ such as Bash and other needed dependencies can be installed as well using
 various tools. Tougher though than on Nix systems as you can read `here
 <https://roots.io/trellis/docs/windows/>`_ .
     
-
-Local Setup
-~~~~~~~~~~~
-
-How you install things locally depends partly on your operating system:
-* OSX,
-* Linux,
-* Windows
-
-and is not really part of this tutorial as we focus on the 
-DreamCompute part of things. I recommend following the Trellis 
-documentation on the `local development setup
-<https://roots.io/trellis/docs/local-development-setup/>`_
-. Just remember the earlier mentioned prerequisites. Without those on your 
-local server or PC you won't be able to get things started. This and the 
-proper changes in the Trellis configuration files for setting up a site 
-locally and remotely the way you want. See documentation on this at `Roots 
-Trellis Docs WordPress Sites
-<https://roots.io/trellis/docs/wordpress-sites/>`_ . 
-
-
-Bedrock
-*******
-
-For working with Bedrock - a Modern WordPress Stack - which is really 
-recommended we recommend you checking out the `Bedrock documentation
-<https://roots.io/bedrock/>`_ . Just great to have a WordPress Stack with a 
-logical file structure, dependency management with Composer, easy WordPress
-configuration and enhanced security!
-
-
-Preparations
-************
+Trellis Setup
+~~~~~~~~~~~~~
  
 **NB** Taken from `Roots Trellis documentation on installing Trellis
 <https://roots.io/trellis/docs/installing-trellis/>`_ 
@@ -109,7 +78,7 @@ Structure as recommended by Roots is
              ├── app/  # → WordPress content directory (themes, plugins, etc.)
              └── wp/   # → WordPress core (don't touch!)
  
- Set up a directory for your project:
+Set up a directory for your project:
 
 .. code::
 
@@ -162,6 +131,51 @@ You also need to edit vault.yml for local development:
               db_password: example_dbpassword
 
 This file contains all the database data.
+
+Local Setup
+~~~~~~~~~~~
+
+How you install things locally depends partly on your operating system:
+* OSX,
+* Linux,
+* Windows
+
+and is not really part of this tutorial as we focus on the 
+DreamCompute part of things. I recommend following the Trellis 
+documentation on the `local development setup
+<https://roots.io/trellis/docs/local-development-setup/>`_
+. Just remember the earlier mentioned prerequisites. Without those on your 
+local server or PC you won't be able to get things started. This and the 
+proper changes in the Trellis configuration files for setting up a site 
+locally and remotely the way you want. See documentation on this at `Roots 
+Trellis Docs WordPress Sites
+<https://roots.io/trellis/docs/wordpress-sites/>`_ . 
+
+* Configure your site(s) based on the WordPress Sites docs. 
+* Read the `development specific ones
+<https://roots.io/trellis/docs/wordpress-sites/#development>`_
+* Make sure you've edited both group_vars/development/wordpress_sites.yml and
+* edited group_vars/development/vault.yml.
+
+And then run the vagrant command from the command line. Do this inside the 
+trellis folder where the Vagrant File is:
+
+.. code::
+
+    vagrant up
+
+
+Bedrock
+*******
+
+For working with Bedrock - a Modern WordPress Stack - which is really 
+recommended we recommend you checking out the `Bedrock documentation
+<https://roots.io/bedrock/>`_ . Just great to have a WordPress Stack with a 
+logical file structure, dependency management with Composer, easy WordPress
+configuration and enhanced security!
+
+
+
 
 Setting Up Your Instance
 ~~~~~~~~~~~~~~~~~~~~~~~~

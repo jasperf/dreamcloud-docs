@@ -8,7 +8,7 @@ Trellis
 In this tutorial we are going to use `Trellis
 <https://roots.io/trellis/>`_
 to install a very sold modern LEMP stack on DreamCompute. This LEMP stack by
- Roots is great to run WordPress websites and works well with `Bedrock
+Roots is great to run WordPress websites and works well with `Bedrock
 <https://roots.io/bedrock/>`_
 , the modern WordPress stack. 
 
@@ -17,8 +17,8 @@ Modern LEMP Stack
 
 Trellis is a set of Ansible playbooks that help you setup a full local, 
 staging and development environment for your WordPress project. With it you
- will have a WordPress ready server running locally or remotely (intention 
- in this totorial) with:
+will have a WordPress ready server running locally or remotely (intention 
+in this totorial) with:
 
 * Nginx
 * MariaDB (MySQL drop-in replacement)
@@ -69,9 +69,9 @@ Local Setup
 ~~~~~~~~~~~
 
 How you install things locally depends partly on your operating system (OSX,
- Linux, Windows) and is not really part of this tutorial as we focus on the 
- DreamCompute part of things. I recommend following the Trellis 
- documentation on the `local development setup
+Linux, Windows) and is not really part of this tutorial as we focus on the 
+DreamCompute part of things. I recommend following the Trellis 
+documentation on the `local development setup
 <https://roots.io/trellis/docs/local-development-setup/>`_
 . Just remember the earlier mentioned prerequisites. Without those on your 
 local server or PC you won't be able to get things started. This and the 
@@ -88,7 +88,7 @@ For working with Bedrock - a Modern WordPress Stack - which is really
 recommended we recommend you checking out the `Bedrock documentation
 <https://roots.io/bedrock/>`_ . Just great to have a WordPress Stack with a 
 logical file structure, dependency management with Composer, easy WordPress
- configuration and enhanced security!
+configuration and enhanced security!
 
 
 Preparations
@@ -164,20 +164,20 @@ Setting Up Your Instance
 
 Go to your DreamCompute Dashboard and pick Ubuntu from the list under 
 images. This Trellis server setup on a DreamCompute instance is best done
- using a Ubuntu 14.0.4 image on DreamCompute. You can also use a more 
- recent version of Ubuntu, Ubuntu 16.0.4. However, you will then be 
- forced to install an older version of Python - 2.x - side by side 
- with Python 3 on your DreamCompute instance. This you can do using: 
+using a Ubuntu 14.0.4 image on DreamCompute. You can also use a more 
+recent version of Ubuntu, Ubuntu 16.0.4. However, you will then be 
+forced to install an older version of Python - 2.x - side by side 
+with Python 3 on your DreamCompute instance. This you can do using: 
 
 .. code:: 
 
     sudo apt-get install python
 
 If you do not mind this extra step then do go ahead. Always nice to run a
- more recent Ubuntu version, isn't it?
+more recent Ubuntu version, isn't it?
 
 Just make sure you use Ubuntu as the Ansible playbooks used by Trellis to
- run the LEMP setup are built with Ubuntu/Debian in mind.
+run the LEMP setup are built with Ubuntu/Debian in mind.
 Whichever Ubuntu version you pick, remember it's better to boot volume 
 backed instances as they are permanent as opposed to ephemeral disks.
 
@@ -203,7 +203,7 @@ added your public SSH key in the DreamCompute Dashboard.
       server.yml playbook."
 
 DreamCompute allows you to add your key in the DC Dashboard under Access &
- Security > Key Pairs. 
+Security > Key Pairs. 
 
 Also make sure the file trellis/group_vars/all/users.yml has the proper 
 path to you SSH key on your box and that that is the one you added to the 
@@ -263,8 +263,8 @@ Hosts
 
 Now under the trellis folder open hosts/production. That is a file where 
 you add your host details for making the real connection. If you do forget
- it you will net be able to connect and sometimes not get any errors at all
- . Here is an example:
+it you will net be able to connect and sometimes not get any errors at all
+. Here is an example:
 
 .. code::
 
@@ -281,7 +281,7 @@ you add your host details for making the real connection. If you do forget
 
 You can either add the domain connected to the DreamCompute public ip 
 address using an A record or use the ip address itself. Better connect the
- domain to your instance before you provision. See this `Dreamhost KB 
+domain to your instance before you provision. See this `Dreamhost KB 
  article on Custom DNS Records
 <https://goo.gl/vYHa1h>`_ .
 
@@ -290,7 +290,7 @@ Users
 
 Wait, we skipped one more important file to attend to located in 
 trellis/group_vars/all. That is users.yml. DreamCompute does not work with
- root but with the user dhc-user and that should be reflected in this file:
+root but with the user dhc-user and that should be reflected in this file:
  
 
 .. code::
@@ -357,7 +357,7 @@ did for provisioning:
 * repo (required) - git URL of your Bedrock-based WordPress project (in 
 SSH format: git@github.com:roots/bedrock.git)
 * repo_subtree_path (optional) - relative path to your Bedrock/WP directory
- in your repo if its not the root (like site in roots-example-project)
+in your repo if its not the root (like site in roots-example-project)
 * branch (optional) - the git branch to deploy (default: master)
 
 You can deploy with a single command:
@@ -372,7 +372,7 @@ where the environment can again be staging or production .
 Make sure you have SSH Agent forwarding set up properly. Read more on it 
 at the `Using SSH Agent Forwarding
 <https://developer.github.com/guides/using-ssh-agent-forwarding/>`_ article
- at Github.
+at Github.
 
 Issues setting up Trellis
 ~~~~~~~~~~~~~~~~~~~~~~~~~

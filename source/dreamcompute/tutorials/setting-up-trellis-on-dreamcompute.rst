@@ -7,7 +7,7 @@ Trellis
 
 In this tutorial we are going to use `Trellis
 <https://roots.io/trellis/>`_
-to install a very sold modern LEMP stack on DreamCompute. This LEMP stack by
+to install a very sold modern LEMP stack on DreamCompute. This LEMP stack by 
 Roots is great to run WordPress websites and works well with `Bedrock
 <https://roots.io/bedrock/>`_
 , the modern WordPress stack. 

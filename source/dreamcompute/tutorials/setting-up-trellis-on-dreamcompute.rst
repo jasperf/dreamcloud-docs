@@ -152,8 +152,7 @@ Trellis Docs WordPress Sites
 <https://roots.io/trellis/docs/wordpress-sites/>`_ . 
 
 * Configure your site(s) based on the WordPress Sites docs. 
-* Read the `development specific ones
-<https://roots.io/trellis/docs/wordpress-sites/#development>`_
+* Read the `development specific ones <https://roots.io/trellis/docs/wordpress-sites/#development>`_
 * Make sure you've edited both group_vars/development/wordpress_sites.yml and
 * edited group_vars/development/vault.yml.
 

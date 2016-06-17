@@ -7,8 +7,7 @@ Trellis
 
 In this tutorial we are going to use `Trellis
 <https://roots.io/trellis/>`_
-to install a very sold modern LEMP stack on DreamCompute. This LEMP stack by 
-Roots is great to run WordPress websites and works well with `Bedrock
+to install a very sold modern LEMP stack on DreamCompute. This LEMP stack by Roots is great to run WordPress websites and works well with `Bedrock
 <https://roots.io/bedrock/>`_
 , the modern WordPress stack. 
 
@@ -16,8 +15,7 @@ Modern LEMP Stack
 ~~~~~~~~~~~~~~~~~
 
 Trellis is a set of Ansible playbooks that help you setup a full local, 
-staging and development environment for your WordPress project. With it you
-will have a WordPress ready server running locally or remotely (intention 
+staging and development environment for your WordPress project. With it you will have a WordPress ready server running locally or remotely (intention 
 in this totorial) with:
 
 * Nginx
@@ -68,8 +66,7 @@ various tools. Tougher though than on Nix systems as you can read `here
 Local Setup
 ~~~~~~~~~~~
 
-How you install things locally depends partly on your operating system (OSX,
-Linux, Windows) and is not really part of this tutorial as we focus on the 
+How you install things locally depends partly on your operating system (OSX,Linux, Windows) and is not really part of this tutorial as we focus on the 
 DreamCompute part of things. I recommend following the Trellis 
 documentation on the `local development setup
 <https://roots.io/trellis/docs/local-development-setup/>`_

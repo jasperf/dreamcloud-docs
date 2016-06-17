@@ -213,11 +213,11 @@ Passwordless SSH
 Trellis works best with passwordless SSH login so do make sure you have 
 added your public SSH key in the DreamCompute Dashboard.
 
-    "We assume that when you first create your server you've already added
-     your SSH key to the root account. Digital Ocean will add this for you
-      when you create a droplet. If you don't want to use an SSH key, you 
-      will need to add the --ask-pass option each time you run the 
-      server.yml playbook."
+    We assume that when you first create your server you've already added
+    your SSH key to the root account. Digital Ocean will add this for you
+    when you create a droplet. If you don't want to use an SSH key, you 
+    will need to add the --ask-pass option each time you run the 
+    server.yml playbook.
 
 DreamCompute allows you to add your key in the DC Dashboard under Access &
 Security > Key Pairs. 

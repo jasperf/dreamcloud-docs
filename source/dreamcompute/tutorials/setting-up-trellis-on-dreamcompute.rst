@@ -250,7 +250,7 @@ following:
 * cache enabled or not
 
 This is basically the same for setting things up locally so if you did that
- well, this should work out just fine.
+well, this should work out just fine.
 
 Vault
 *****

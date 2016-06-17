@@ -236,7 +236,7 @@ You can either add the domain connected to the DreamCompute public ip
 address using an A record or use the ip address itself. Better connect the
  domain to your instance before you provision. See this `Dreamhost KB 
  article on Custom DNS Records
-<https://help.dreamhost.com/hc/en-us/articles/215414867-How-do-I-add-custom-DNS-records->`_ .
+<https://goo.gl/vYHa1h>`_ .
 
 Users
 *****

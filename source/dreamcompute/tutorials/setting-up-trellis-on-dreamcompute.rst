@@ -63,6 +63,7 @@ Windows more Linux tools have become available with the latest version
 such as Bash and other needed dependencies can be installed as well using 
 various tools. Tougher though than on Nix systems as you can read `here
 <https://roots.io/trellis/docs/windows/>`_ .
+    
 
 Local Setup
 ~~~~~~~~~~~
@@ -77,8 +78,56 @@ local server or PC you won't be able to get things started. This and the
 proper changes in the Trellis configuration files for setting up a site 
 locally and remotely the way you want. See documentation on this at `Roots 
 Trellis Docs WordPress Sites
-<https://roots.io/trellis/docs/wordpress-sites/>`_ . But a bare minimal 
-example of wordpress_sites.yml for development would be:
+<https://roots.io/trellis/docs/wordpress-sites/>`_ . 
+
+
+Bedrock
+*******
+
+For working with Bedrock - a Modern WordPress Stack - which is really 
+recommended we recommend you checking out the `Bedrock documentation
+<https://roots.io/bedrock/>`_ . Just great to have a WordPress Stack with a 
+logical file structure, dependency management with Composer, easy WordPress
+ configuration and enhanced security!
+
+
+Preparations
+************
+ 
+**NB** Taken from `Roots Trellis documentation on installing Trellis
+<https://roots.io/trellis/docs/installing-trellis/>`_ 
+
+Structure as recommended by Roots is
+
+ .. code::
+
+     example.com/      # → Root folder for the project
+     ├── trellis/      # → Your clone of this repository
+     └── site/         # → A Bedrock-based WordPress site
+         └── web/
+             ├── app/  # → WordPress content directory (themes, plugins, etc.)
+             └── wp/   # → WordPress core (don't touch!)
+ 
+ Set up a directory for your project:
+ .. code::
+     $ mkdir example.com && cd example.com
+    
+            
+Then clone the repo:
+
+ .. code::
+
+     git clone --depth=1 git@github.com:roots/trellis.git && rm -rf trellis/.git
+ 
+
+Clone Bedrock
+.. code::
+
+    git clone --depth=1 git@github.com:roots/bedrock.git site && rm -rf site/.git
+
+Next you need to change the wordpress_sites.yml. File for local 
+development is to be found at trellis/group_vars/development/wordpress_sites.yml
+
 
 .. code::
 
@@ -97,20 +146,18 @@ example of wordpress_sites.yml for development would be:
         cache:
           enabled: false
 
-An example you need to edit to suit your needs. For the other files that 
-need 
-updating like vault.yml we again refer to the documentation.
+You also need to edit vault.yml for local development:
 
+.. code::
 
-Bedrock
-*******
+#  group_vars/development/vault.yml
+    vault_wordpress_sites:
+      example.com:
+        admin_password: admin
+        env:
+          db_password: example_dbpassword
 
-For working with Bedrock - a Modern WordPress Stack - which is really 
-recommended we recommend you checking out the `Bedrock documentation
-<https://roots.io/bedrock/>`_ . Just great to have a WordPress Stack with a 
-logical file structure, dependency management with Composer, easy WordPress
- configuration and enhanced security!
-
+This file contains all the database data.
 
 Setting Up Your Instance
 ~~~~~~~~~~~~~~~~~~~~~~~~

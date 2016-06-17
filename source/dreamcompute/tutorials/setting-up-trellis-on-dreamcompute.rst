@@ -65,7 +65,12 @@ various tools. Tougher though than on Nix systems as you can read `here
 Local Setup
 ~~~~~~~~~~~
 
-How you install things locally depends partly on your operating system (OSX,Linux, Windows) and is not really part of this tutorial as we focus on the 
+How you install things locally depends partly on your operating system:
+* OSX,
+* Linux,
+* Windows
+
+and is not really part of this tutorial as we focus on the 
 DreamCompute part of things. I recommend following the Trellis 
 documentation on the `local development setup
 <https://roots.io/trellis/docs/local-development-setup/>`_
@@ -95,7 +100,7 @@ Preparations
 
 Structure as recommended by Roots is
 
- .. code::
+.. code::
 
      example.com/      # → Root folder for the project
      ├── trellis/      # → Your clone of this repository
@@ -105,19 +110,21 @@ Structure as recommended by Roots is
              └── wp/   # → WordPress core (don't touch!)
  
  Set up a directory for your project:
- .. code::
+
+.. code::
 
      $ mkdir example.com && cd example.com
     
             
 Then clone the repo:
 
- .. code::
+.. code::
 
      git clone --depth=1 git@github.com:roots/trellis.git && rm -rf trellis/.git
  
 
-Clone Bedrock
+Clone Bedrock:
+
 .. code::
 
     git clone --depth=1 git@github.com:roots/bedrock.git site && rm -rf site/.git

@@ -55,7 +55,7 @@ Local Setup
 
 How you install things locally depends partly on your operating system (OSX, Linux, Windows) and is not really part of this tutorial as we focus on the DreamCompute part of things. I recommend following the Trellis documentation on this `here
 <https://roots.io/trellis/docs/local-development-setup/>`_
-. Just remember the earlier mentioned prerequisites. Without those on your local server or PC you won't be able to get things started. This and the proper changes in the Trellis configuration files for setting up a site locally and remotely the way you want. See documentation on this `here
+. Just remember the earlier mentioned prerequisites. Without those on your local server or PC you won't be able to get things started. This and the proper changes in the Trellis configuration files for setting up a site locally and remotely the way you want. See documentation on this at `Roots Trellis Docs WordPress Sites
 <https://roots.io/trellis/docs/wordpress-sites/>`_ . But a bare minimal example of wordpress_sites.yml for development would be:
 
 .. code::
@@ -118,7 +118,7 @@ Also make sure the file trellis/group_vars/all/users.yml has the proper path to 
 Configuration Files
 ~~~~~~~~~~~~~~~~~~~
 
-Let's say you work locally and on production only and have worked out things locally. Then you only need to set up / edit a couple of files for provisioning your remote server - setting up remote server documention `here
+Let's say you work locally and on production only and have worked out things locally. Then you only need to set up / edit a couple of files for provisioning your remote server - `setting up remote server documention
 <https://roots.io/trellis/docs/remote-server-setup/>`_
 
 WordPress Sites
@@ -153,7 +153,7 @@ Once that is done you also need to edit vault.yml - extended documention at http
 * logged_in_salt
 * nonce_salt
 
-Generate your keys here at the Roots `salts generator
+Generate your keys at the Roots `salts generator
 <https://roots.io/salts.html>`_ .
 
 
@@ -173,13 +173,13 @@ Now under the trellis folder open hosts/production. That is a file where you add
     [web]
     domain.com
 
-You can either add the domain connected to the DreamCompute public ip address using an A record or use the ip address itself. Better connect the domain to your instance before you provision. See Dreamhost KB article `here
+You can either add the domain connected to the DreamCompute public ip address using an A record or use the ip address itself. Better connect the domain to your instance before you provision. See this `Dreamhost KB article on Custom DNS Records
 <https://help.dreamhost.com/hc/en-us/articles/215414867-How-do-I-add-custom-DNS-records->`_ .
 
 Users
 *****
 
-Wait, there is one more important file to attend to located in trellis/group_vars/all. That is users.yml. DreamCompute does not work with root but with the user dhc-user and that should be reflected in this file:
+Wait, we skipped one more important file to attend to located in trellis/group_vars/all. That is users.yml. DreamCompute does not work with root but with the user dhc-user and that should be reflected in this file:
 
 .. code::
 
@@ -248,5 +248,5 @@ Issues setting up Trellis
 
 If you do run into issues ask a question at `Roots Discourse
 <https://discourse.roots.io/c/trellis>`_
-This is the dedicated forum sub section for Trellis and that is where you can find the experts you need debuggig issues. Many errors with possible solution can also be found `here
+This is the dedicated forum sub section for Trellis and that is where you can find the experts you need debuggig issues. Many errors with possible solution can also be found at the Imagewize Blog article called `Roots Trellis Errors
 <https://imagewize.com/web-development/roots-trellis-errors/>`_ .

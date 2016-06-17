@@ -44,8 +44,7 @@ to work with Trellis locally and to be able to work on the remote server:
 * Ansible 2.0.2.0
 * Virtualbox >= 4.3.10
 * Vagrant >= 1.5.4
-* vagrant-bindfs >= 0.3.1 (Windows users may skip this if not using 
-vagrant-winnfsd for folder sync)
+* vagrant-bindfs >= 0.3.1 (Windows users may skip this if not using vagrant-winnfsd for folder sync)
 * vagrant-hostmanager
 
 **NOTES** 
@@ -107,6 +106,7 @@ Structure as recommended by Roots is
  
  Set up a directory for your project:
  .. code::
+
      $ mkdir example.com && cd example.com
     
             
@@ -147,12 +147,12 @@ You also need to edit vault.yml for local development:
 
 .. code::
 
-#  group_vars/development/vault.yml
-    vault_wordpress_sites:
-      example.com:
-        admin_password: admin
-        env:
-          db_password: example_dbpassword
+    #  group_vars/development/vault.yml
+        vault_wordpress_sites:
+          example.com:
+            admin_password: admin
+            env:
+              db_password: example_dbpassword
 
 This file contains all the database data.
 
@@ -279,7 +279,7 @@ it you will net be able to connect and sometimes not get any errors at all
 You can either add the domain connected to the DreamCompute public ip 
 address using an A record or use the ip address itself. Better connect the
 domain to your instance before you provision. See this `Dreamhost KB 
- article on Custom DNS Records
+article on Custom DNS Records
 <https://goo.gl/vYHa1h>`_ .
 
 Users
@@ -342,19 +342,17 @@ Deploying your site to DreamCompute
 
 You have to realize that provisioning is just setting up your server for 
 working with WordPress really well and at lightning speed. The instance is
- still not loading a site at all and going to the ip address or domain will
-  show you a nice Nginx 404 as nothing can be found. You simply need to 
-  push your locally deployed WordPress site to the server still. Once that 
-  is done you still either have to go through the installation process or 
-  import and existing database.
+still not loading a site at all and going to the ip address or domain will
+show you a nice Nginx 404 as nothing can be found. You simply need to 
+push your locally deployed WordPress site to the server still. Once that 
+is done you still either have to go through the installation process or 
+import and existing database.
 
 For deploys, there are a couple more settings needed besides the ones you 
 did for provisioning:
 
-* repo (required) - git URL of your Bedrock-based WordPress project (in 
-SSH format: git@github.com:roots/bedrock.git)
-* repo_subtree_path (optional) - relative path to your Bedrock/WP directory
-in your repo if its not the root (like site in roots-example-project)
+* repo (required) - git URL of your Bedrock-based WordPress project (in SSH format: git@github.com:roots/bedrock.git)
+* repo_subtree_path (optional) - relative path to your Bedrock/WP directory in your repo if its not the root (like site in roots-example-project)
 * branch (optional) - the git branch to deploy (default: master)
 
 You can deploy with a single command:

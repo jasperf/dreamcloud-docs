@@ -136,6 +136,7 @@ Local Setup
 ~~~~~~~~~~~
 
 How you install things locally depends partly on your operating system:
+
 * OSX,
 * Linux,
 * Windows

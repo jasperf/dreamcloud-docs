@@ -98,6 +98,14 @@ Clone Bedrock:
 
     git clone --depth=1 git@github.com:roots/bedrock.git site && rm -rf site/.git
 
+Install the Galaxy Ansible Roles
+
+.. code::
+
+    cd trellis && ansible-galaxy install -r requirements.yml
+
+
+
 Next you need to change the wordpress_sites.yml. File for local 
 development is to be found at trellis/group_vars/development/wordpress_sites.yml
 
@@ -159,7 +167,9 @@ Just make sure you have checked the following items:
 * Make sure you've edited both group_vars/development/wordpress_sites.yml and
 * edited group_vars/development/vault.yml.
 
-And then run the vagrant command from the command line. Do this inside the 
+They were discussed under installation earlier!
+
+Then run the vagrant command from the command line. Do this inside the 
 trellis folder where the Vagrant File is:
 
 .. code::

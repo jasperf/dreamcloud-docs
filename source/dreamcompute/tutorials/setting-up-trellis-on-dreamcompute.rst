@@ -152,6 +152,8 @@ locally and remotely the way you want. See documentation on this at `Roots
 Trellis Docs WordPress Sites
 <https://roots.io/trellis/docs/wordpress-sites/>`_ . 
 
+Just make sure you have checked the following items:
+
 * Configure your site(s) based on the WordPress Sites docs. 
 * Read the `development specific ones <https://roots.io/trellis/docs/wordpress-sites/#development>`_
 * Make sure you've edited both group_vars/development/wordpress_sites.yml and
